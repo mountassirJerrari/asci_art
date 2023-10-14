@@ -16,7 +16,7 @@ const sharp = require('sharp');
 const generateAsciArt = async (srcImage , imageWidth, imageHeight, mode = false, inversion = false) => {
     return new Promise((res, rej) => {
 
-        sharp(src)
+        sharp(srcImage)
             .resize(imageWidth, imageHeight)
             .greyscale()
             .raw()
