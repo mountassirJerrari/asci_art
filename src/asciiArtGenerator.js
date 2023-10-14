@@ -4,7 +4,7 @@ const sharp = require('sharp');
 /**
  * Generates ASCII art from an image using the Sharp library.
  *
- * @param {string} src - The path to the source image file.
+ * @param {string} srcImage  - The path to the source image file.
  * @param {number} imageWidth - The desired width of the output image in characters.
  * @param {number} imageHeight - The desired height of the output image in characters.
  * @param {boolean} [mode=false] - Use an extended character set if true, or a basic set if false.
@@ -13,7 +13,7 @@ const sharp = require('sharp');
  * @throws {Error} If there is an error during image processing.
  */
 
-const generateAsciArt = async (src, imageWidth, imageHeight, mode = false, inversion = false) => {
+const generateAsciArt = async (srcImage , imageWidth, imageHeight, mode = false, inversion = false) => {
     return new Promise((res, rej) => {
 
         sharp(src)
