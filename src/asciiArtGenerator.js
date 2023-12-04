@@ -65,11 +65,15 @@ const generateAsciArt = async (srcImage , imageWidth, imageHeight, mode = false,
                         const luminance = luminanceArray[y][x];
                         const charIndex = Math.round((luminance / 255) * (customCharacters.length - 1));
                         const character = customCharacters[charIndex];
-                        lign += character + character
+                        
+                        lign += character +" "+ character 
                     }
-                    allLigns += lign + "\n";
+                    
+                    allLigns += ".                  \n                 ." +lign ;
                 }
+                
                 res(allLigns);
+                
             }
             )
             .catch(err => {
